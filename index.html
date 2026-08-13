@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tournament Hub</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#0b1020;color:#fff}
+header{padding:18px 6%;display:flex;justify-content:space-between;align-items:center;background:#111936;position:sticky;top:0;z-index:2}
+.logo{font-size:24px;font-weight:800}.logo span{color:#7c5cff}
+nav a{color:#ddd;text-decoration:none;margin-left:18px;font-size:14px}
+.hero{padding:60px 6%;background:linear-gradient(135deg,#161f48,#0b1020);text-align:center}
+.hero h1{font-size:42px;margin:10px 0}.hero p{color:#b9c0d9}.btn{display:inline-block;padding:12px 20px;border:0;border-radius:10px;background:#7c5cff;color:white;font-weight:700;cursor:pointer;text-decoration:none}
+section{padding:34px 6%}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.card{background:#151d38;border:1px solid #283252;border-radius:16px;padding:20px;box-shadow:0 8px 25px #0003}
+.card h3{margin-top:0}.price{font-size:28px;font-weight:800;color:#7c5cff}.muted{color:#aeb6d0}.slot{margin:15px 0;height:10px;background:#29314c;border-radius:8px;overflow:hidden}.fill{height:100%;background:#45d483;width:0}
+.badge{display:inline-block;padding:5px 9px;border-radius:8px;background:#203c32;color:#6ff0a8;font-size:12px;font-weight:700}
+form{display:grid;gap:12px;max-width:600px}input,select{width:100%;padding:13px;border-radius:9px;border:1px solid #34405f;background:#0e152b;color:white}
+footer{text-align:center;padding:30px;color:#8892b2;border-top:1px solid #222b46}
+.notice{background:#2a2035;border:1px solid #5b416c;padding:14px;border-radius:10px;color:#ddd}
+</style>
+</head>
+<body>
+<header><div class="logo">Tournament <span>Hub</span></div>
+<nav><a href="#tournaments">Tournaments</a><a href="#register">Register</a><a href="#results">Results</a><a href="#aviation">Aviation</a></nav></header>
+
+<div class="hero"><h1>Free Fire Tournament Hub</h1>
+<p>Join weekly tournaments, register your team and track results.</p>
+<a class="btn" href="#tournaments">View Tournaments</a></div>
+
+<section id="tournaments"><h2>Upcoming Tournaments</h2><div class="grid">
+<div class="card"><span class="badge">SATURDAY</span><h3>Saturday Night Battle</h3><p class="muted">Every Saturday · 6:00 PM – 9:00 PM</p><div class="price">₹40 <small>/ team</small></div>
+<p>🥇 Booyah ₹200 &nbsp; 🥈 2nd ₹100</p><p><b id="satText">0/12 teams</b> · <span id="satAvail">12 available</span></p><div class="slot"><div class="fill" id="satFill"></div></div><button class="btn" onclick="selectTournament('Saturday — 6 PM to 9 PM')">Join Tournament</button></div>
+<div class="card"><span class="badge">SUNDAY</span><h3>Sunday Afternoon Battle</h3><p class="muted">Every Sunday · 12:00 PM – 3:00 PM</p><div class="price">₹40 <small>/ team</small></div>
+<p>🥇 Booyah ₹200 &nbsp; 🥈 2nd ₹100</p><p><b id="sunText">0/12 teams</b> · <span id="sunAvail">12 available</span></p><div class="slot"><div class="fill" id="sunFill"></div></div><button class="btn" onclick="selectTournament('Sunday — 12 PM to 3 PM')">Join Tournament</button></div>
+</div></section>
+
+<section id="register"><h2>Team Registration</h2><div class="card">
+<form onsubmit="registerTeam(event)">
+<select id="tournament" required><option value="">Select tournament</option><option>Saturday — 6 PM to 9 PM</option><option>Sunday — 12 PM to 3 PM</option></select>
+<input id="team" placeholder="Team name" required><input id="captain" placeholder="Captain name" required>
+<input id="phone" placeholder="Contact number" required><button class="btn" type="submit">Register Team</button>
+</form><p id="msg"></p></div></section>
+
+<section id="results"><h2>Results & Prize History</h2><div class="card"><p class="muted">Results will appear here after matches are completed.</p><p>🥇 Booyah — ₹200</p><p>🥈 2nd Place — ₹100</p></div></section>
+
+<section id="aviation"><h2>✈️ Aviation</h2><div class="card"><p class="muted">Aviation section reserved for Tournament Hub updates and content.</p></div></section>
+
+<section><div class="notice"><b>Important:</b> This is a frontend demo. Real payments, secure login, database storage, automatic slot locking, room credentials and admin authentication require a backend and payment integration.</div></section>
+<footer>
+  <div style="margin-bottom:10px">📸 Instagram: <b>Tournment_hub</b> &nbsp; | &nbsp; ▶️ YouTube: <b>Official Thunder Zone</b></div>
+  © 2026 Tournament Hub · Free Fire Tournament Platform
+</footer>
+
+<script>
+let teams={sat:0,sun:0};
+function selectTournament(t){document.getElementById('tournament').value=t;location.hash='register';}
+function render(){
+for(const [k,p] of [['sat','sat'],['sun','sun']]){
+let n=teams[k];document.getElementById(p+'Text').textContent=n+'/12 teams';
+document.getElementById(p+'Avail').textContent=(12-n)+' available';
+document.getElementById(p+'Fill').style.width=(n/12*100)+'%';
+}}
+function registerTeam(e){
+e.preventDefault();let t=document.getElementById('tournament').value;let key=t.startsWith('Saturday')?'sat':'sun';
+if(teams[key]>=12){document.getElementById('msg').textContent='This tournament is FULL.';return;}
+teams[key]++;render();document.getElementById('msg').textContent='Registration saved in this demo. Payment/backend integration is required for a real booking.';
+e.target.reset();
+}
+render();
+</script>
+</body></html>
