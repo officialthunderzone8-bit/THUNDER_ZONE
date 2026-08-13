@@ -1,2 +1,73 @@
 # THUNDER_ZONE
 THUNDER ZONE ESPORTS FREE FIRE TOURNMENT
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tournaments Hub — Free Fire Tournaments</title>
+<style>
+:root{--bg:#07070b;--card:#11121a;--line:#242634;--text:#f7f7fb;--muted:#a9adbd;--accent:#7c5cff;--accent2:#00e5ff;--good:#32e875}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:radial-gradient(circle at 80% 0,#1d1545 0,transparent 35%),var(--bg);color:var(--text)}
+a{text-decoration:none;color:inherit}.wrap{max-width:1050px;margin:auto;padding:0 18px}
+nav{position:sticky;top:0;z-index:10;background:#08080ddd;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{height:68px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;gap:10px;align-items:center;font-weight:900;font-size:20px}.logo{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;color:#08080b;font-weight:1000;font-size:21px;box-shadow:0 0 24px #7c5cff55}
+.links{display:flex;gap:20px;color:var(--muted);font-size:14px}.links a:hover{color:#fff}
+.hero{padding:75px 0 45px;text-align:center}.pill{display:inline-block;border:1px solid #34304f;background:#151126;color:#c9c2ff;padding:7px 12px;border-radius:99px;font-size:12px;font-weight:800}
+h1{font-size:clamp(40px,9vw,76px);line-height:.95;margin:18px 0 16px;letter-spacing:-3px}.grad{background:linear-gradient(90deg,#fff,#9f8cff,#00e5ff);-webkit-background-clip:text;color:transparent}
+.hero p{max-width:650px;margin:auto;color:var(--muted);font-size:17px;line-height:1.6}.buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:25px}.btn{padding:13px 18px;border-radius:12px;font-weight:900;border:1px solid var(--line);background:#171923}.primary{background:linear-gradient(90deg,var(--accent),#5c8cff);border:0}
+section{padding:42px 0}.title{display:flex;justify-content:space-between;align-items:end;margin-bottom:18px}.title h2{margin:0;font-size:27px}.title span{color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:linear-gradient(180deg,#141621,#0e0f16);border:1px solid var(--line);border-radius:18px;padding:18px}.tag{font-size:11px;font-weight:900;color:#a99dff;background:#211c3c;padding:6px 9px;border-radius:8px;display:inline-block}.card h3{margin:14px 0 8px}.meta{display:grid;grid-template-columns:1fr 1fr;gap:8px;color:var(--muted);font-size:13px}.meta b{color:#fff;display:block;margin-top:3px}.join{display:block;text-align:center;margin-top:16px;background:#202330;padding:11px;border-radius:10px;font-weight:800}.join:hover{background:#2a2e40}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.step strong{font-size:28px;color:var(--accent2)}.step p{color:var(--muted);line-height:1.5}
+form{max-width:650px;margin:auto;background:var(--card);padding:20px;border:1px solid var(--line);border-radius:18px}label{display:block;margin:12px 0 6px;font-size:13px;color:#c8cad5}input,select{width:100%;padding:13px;border-radius:10px;border:1px solid var(--line);background:#0b0c11;color:#fff;outline:none}button{width:100%;margin-top:16px;padding:13px;border:0;border-radius:10px;background:linear-gradient(90deg,var(--accent),#5c8cff);color:#fff;font-weight:900;font-size:15px}
+.note{font-size:12px;color:var(--muted);text-align:center;margin-top:10px}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:13px;text-align:center}
+@media(max-width:720px){.links{display:none}.grid,.steps{grid-template-columns:1fr}.hero{padding-top:55px}.card{padding:16px}}
+</style>
+</head>
+<body>
+<nav><div class="wrap nav"><div class="brand"><div class="logo">TH</div>Tournaments Hub</div><div class="links"><a href="#tournaments">Tournaments</a><a href="#how">How to Join</a><a href="#register">Register</a></div></div></nav>
+
+<header class="hero wrap">
+<span class="pill">FREE FIRE • TOURNAMENTS • ESPORTS</span>
+<h1>Play. Compete.<br><span class="grad">Win.</span></h1>
+<p>Welcome to Tournaments Hub — a simple home for Free Fire tournament announcements, registrations and results.</p>
+<div class="buttons"><a class="btn primary" href="#tournaments">View Tournaments</a><a class="btn" href="#register">Register Now</a></div>
+</header>
+
+<section id="tournaments"><div class="wrap"><div class="title"><h2>🏆 Upcoming Tournaments</h2><span>Sample events — replace with your real events</span></div>
+<div class="grid">
+<div class="card"><span class="tag">FREE FIRE</span><h3>Thunder Zone Saturday</h3><div class="meta"><div>Entry<b>₹40 / team</b></div><div>Prize<b>₹150 + ₹100</b></div><div>Date<b>Saturday • 6–9 PM</b></div><div>Slots<b>12 Teams</b></div></div><a class="join" href="#register">Join Tournament →</a></div>
+<div class="card"><span class="tag">FREE FIRE</span><h3>Thunder Zone Sunday</h3><div class="meta"><div>Entry<b>₹40 / team</b></div><div>Prize<b>₹150 + ₹100</b></div><div>Date<b>Sunday • 12–3 PM</b></div><div>Slots<b>12 Teams</b></div></div><a class="join" href="#register">Join Tournament →</a></div>
+<div class="card"><span class="tag">FREE FIRE</span><h3>Thunder Zone Weekly</h3><div class="meta"><div>Entry<b>₹40 / team</b></div><div>Prize<b>₹150 + ₹100</b></div><div>Date<b>Weekly</b></div><div>Slots<b>12 Teams</b></div></div><a class="join" href="#register">Join Tournament →</a></div>
+</div></div></section>
+
+<section id="how"><div class="wrap"><div class="title"><h2>How to Join</h2></div><div class="steps">
+<div class="card step"><strong>01</strong><h3>Choose</h3><p>Pick an upcoming tournament and check its date, entry and slots.</p></div>
+<div class="card step"><strong>02</strong><h3>Register</h3><p>Send your player details through the registration form below.</p></div>
+<div class="card step"><strong>03</strong><h3>Compete</h3><p>Get the room details from the organiser and play your match.</p></div>
+</div></div></section>
+
+<section><div class="wrap"><div class="title"><h2>⚔️ Tournament Format</h2><span>Thunder Zone</span></div>
+<div class="grid">
+<div class="card"><span class="tag">SATURDAY</span><h3>6:00 PM – 9:00 PM</h3><p style="color:#a9adbd">12 team slots • ₹40 per team</p></div>
+<div class="card"><span class="tag">SUNDAY</span><h3>12:00 PM – 3:00 PM</h3><p style="color:#a9adbd">12 team slots • ₹40 per team</p></div>
+<div class="card"><span class="tag">PRIZES</span><h3>₹150 + ₹100</h3><p style="color:#a9adbd">Winner ₹150 • Top 2 / Runner-up ₹100</p></div>
+</div></div></section>
+
+<section id="register"><div class="wrap"><div class="title"><h2>📝 Tournament Registration</h2></div>
+<form onsubmit="submitForm(event)"><label>Player / Team Name</label><input required placeholder="Enter name">
+<label>Free Fire UID</label><input required inputmode="numeric" placeholder="Enter UID">
+<label>WhatsApp Number</label><input required type="tel" placeholder="Enter number">
+<label>Tournament</label><select><option>Thunder Zone Saturday</option><option>Thunder Zone Sunday</option><option>Thunder Zone Weekly</option></select>
+<button type="submit">Submit Registration</button><div class="note" id="msg">Registration is subject to organiser verification. Payment should be handled by a parent/guardian. Submit your details and wait for slot confirmation.</div></form>
+</div></section>
+
+<footer>Tournaments Hub © 2026 • Free Fire Tournament Community</footer>
+<script>
+function submitForm(e){
+ e.preventDefault();
+ document.getElementById('msg').textContent='Registration received! Organiser verification is required before your slot is confirmed.';
+}
+</script>
+</body></html>
